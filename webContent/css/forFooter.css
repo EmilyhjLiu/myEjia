@@ -1,0 +1,16 @@
+@CHARSET "UTF-8";
+#suFooter li{
+	float: left;
+	height: 18px;
+	width: 120px;
+	padding: 11px 0px;
+}
+#suFooter a{
+	display: block;
+	text-align: center;
+	border-right: dashed 1px #fff;
+}
+#suFooter .last{
+	border:none;
+	width: 224px;
+}

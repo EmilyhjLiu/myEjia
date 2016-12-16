@@ -1,0 +1,169 @@
+@CHARSET "UTF-8";
+
+/* 顶部导航 */
+#topNav{border-bottom:1px solid #B1B1A5;line-height:40px;}
+#topNav li{
+	float:left;
+	width: 120px;
+	position:relative;
+	cursor:pointer;
+}
+#topNav .status,#topNav .center{padding:0px 40px;}
+#topNav .status{
+	float:left;
+	text-align:left;
+}
+#topNav .center{
+	float:right;
+	text-align:right;
+	color: #fff;
+}
+#topNav .centerImg:before{
+	content:"";
+	background:url(../img/header.png) -52px bottom;
+	float:left;
+	width:16px;
+	height:16px;
+	margin: 12px 10px 12px 30px;
+}
+#topNav .center ul{
+	height:0px;
+	background:#000;
+	position:absolute;
+	overflow:hidden;
+	left: 14px;
+	text-align: center;
+	z-index:1;
+	border-radius:0px 0px 10px 10px;
+}
+#topNav .center ul a:hover{
+	color:#d1ad83;
+}
+
+/* logo，公告 搜索框 */
+#headerWrap{line-height:68px;}
+#logo{float:left;}
+#logo a{
+	display:block;
+	width:156px;
+	height:68px;
+	background:url(../img/header.png) 0 -68px;
+}
+.info{
+	float:left;
+    width: 500px;
+    text-align: center;
+}
+.search{
+	float:right;
+	width:274px;
+	padding:15px 10px;
+}
+.search .txt{
+	height:38px;
+	width:220px;
+	float:right;
+	padding-left: 16px;
+}
+.search .btn{
+	height:38px;
+	width:38px;
+	background:#fff url(../img/header.png) left bottom;
+	float:right;
+	cursor:pointer;
+}
+
+.navWrap{
+	background:#fff;
+}
+ul.navBar{
+	padding:0px 7px;
+	background:#fff;
+	width:936px;
+}
+.navBar li{
+	float:left;
+	width:104px;
+	text-align: center;
+	line-height:40px;
+}
+.navBar li a{
+	color:#000;
+}
+/* 登陆注册 */
+		.loginMask{
+			position:absolute;
+			top: 0px;
+			left: 0px;
+			background: #000;
+			opacity: 0.6;
+			filter:alpha(opacity=0.6);
+			z-index:1;
+		}
+		
+		#loginInfo,#regInfo{
+			position:absolute;
+			z-index:2;
+			top: 0px;
+			left: 0px;
+			line-height: 30px;
+			overflow: hidden;
+		}	
+		#loginInfo a,#regInfo a{
+			color:#000;
+		}	
+		#loginInfo .formWrap,#regInfo .formWrap{
+			position:absolute;
+			width:275px;
+			padding:10px 40px;
+			background:#fff;
+			-webkit-border-radius:10px;
+			-moz-border-radius:10px;
+			border-radius:10px;
+		}
+		#loginInfo .formWrap h3,#regInfo .formWrap h3{
+			font-size:24px;
+			text-align:center;
+			color:#000;
+			line-height:60px;
+		}
+		.close{
+			width: 20px;
+		    height: 20px;
+		    background: url(/myEjia/img/close.jpg) center center;
+		    position: absolute;
+		    top: 6px;
+		    right: 8px;
+		    background-size: cover;
+		}
+		#loginInfo #lg-form div,#regInfo  #reg-form div{
+			padding:5px 0;
+		}
+		#loginInfo #lg-form .txt,#regInfo #reg-form .txt{
+			border:1px solid #959090;		
+			padding: 5px 0px;
+			font-size: 16px;
+			line-height: 20px;
+			width: 100%;
+			text-align:center;
+			
+			-webkit-border-radius:10px;
+			-moz-border-radius:10px;
+			border-radius:10px;
+		}
+		#loginInfo #lg-form .btn,#regInfo #reg-form .btn{
+			font-size: 18px;
+			padding:5px 10px;
+			border:1px solid #959090;
+			width:100%;
+			
+			-webkit-border-radius:10px;
+			-moz-border-radius:10px;
+			border-radius:10px;
+		
+			-webkit-box-shadow: 2px 1px 1px #aaa;
+			-moz-box-shadow: 2px 1px 1px #aaa;
+			box-shadow: 2px 1px 1px #aaa;
+		}
+
+		#rMessage,#message{width:100%;text-align:center;color: red;}

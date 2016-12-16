@@ -1,0 +1,128 @@
+@CHARSET "UTF-8";
+
+.core .carousel{
+	width:100%;
+	overflow:hidden;
+	position:relative;
+	height:400px;
+}
+.core .carouselList{
+	width:500%;
+	position:absolute;
+}
+.core .carouselList li{
+	width:20%;
+	float:left;
+}
+.core .carouselList a{
+	display:block;
+	width:100%;
+	height:400px;
+	background-position:center center;
+}
+.core .carouselList .firKv{
+	background-image:url("/myEjia/img/index/kv1.jpg");
+}
+.core .carouselList .secKv{
+	background-image:url("/myEjia/img/index/kv2.jpg");
+}
+.core .carouselList .thirtKv{
+	background-image:url("/myEjia/img/index/kv3.jpg");
+}
+.core .carouselNav{
+	height:30px;
+	text-align:center;
+}
+.core .carouselNav li{
+	display:inline-block;
+}
+.core .carouselNav a{
+	display:block;
+	width:10px;
+	height:10px;
+	background:#666;
+	border-radius:10px;
+	margin:10px;
+}
+.core .carouselNav a.active{
+	background:#fff;
+}
+
+.core .hotShop{
+	text-align: center;
+	background:#fff;
+}
+.core .hotShop h2{
+	color:#000;
+	font-size:40px;
+	line-height:60px;
+}
+.core .hotShop p{
+	line-height:40px;
+}
+
+.core .hotShop ul{
+	width: 950px;
+	margin:0px auto;
+}
+.core .hotShop li{
+	float: left;
+	width: 168px;
+	height: 300px;
+	overflow: hidden;
+	border:1px solid #666;
+	margin:10px;
+	position: relative;
+}
+
+.core .hotShop li .top{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	background: #000;
+	color: #fff;
+	padding: 6px;
+}
+
+.core .hotShop .img{
+	position: absolute;
+	top: 40px;
+	width: 100%;
+}
+.core .hotShop .img a{
+	display: block;
+	height: 168px;
+	width: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.core .hotShop .detail{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+.core .hotShop .detail h3{
+	color:#000;
+	line-height:30px;
+}		
+.core .hotShop .detail span{
+	display: block;
+	line-height: 20px;
+	background:#e6e5e5;
+	margin:0px 20px;
+	color:#000;
+}
+.core .hotShop .detail a{
+	display: block;
+	line-height: 20px;
+	color:#fff;
+	border:1px solid #000;
+	background:#000;
+	margin:10px 20px;
+}
+.core .hotShop .detail a:hover{
+	background:#fff;
+	color:#000;
+}

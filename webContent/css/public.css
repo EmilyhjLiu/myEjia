@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+/* 页面加载时首先重置 */
+/* reset */
+	body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,pre,form,input,textarea,th,td,select{margin:0;padding:0;}
+	em{font-style:normal}
+	li{list-style:none}
+	a{text-decoration:none;color:#fff;}
+	img{border:none; vertical-align:top;}
+	table{border-collapse:collapse;}
+	textarea{ resize:none;overflow:auto;}
+	input,textarea{outline:none;border:none;font-family: 'Oleo Script', cursive;}
+/* end reset */
+
+/* 设置全站字体默认颜色 */
+body{
+	color:#B1B1A5;
+	background: #000;
+	font-family: 'Oleo Script', cursive;
+}
+
+/* 清除浮动 */
+.clear{zoom:1;}
+.clear:after{content:"";display:block;clear:both;}
+
+/* ie haker */
+a{
+	background: url(about:blank);
+}
+
+.wrap{width:950px;background:#000;margin:0px auto;}
+		
+/* font */
+/* latin-ext */
+@font-face {
+  font-family: 'Oleo Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oleo Script'), local('OleoScript-Regular'), url(/myEjia/font/_weQNDK6Uf40CiGFKBBUjiYE0-AqJ3nfInTTiDXDjU4.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF,utf-8;
+}
+/* latin */
+@font-face {
+  font-family: 'Oleo Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Oleo Script'), local('OleoScript-Regular'), url(/myEjia/font/_weQNDK6Uf40CiGFKBBUjo4P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000,utf-8;
+}

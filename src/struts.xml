@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="json" namespace="/" extends="struts-default,json-default">
+<!--         用户登录 -->
+       <action name="UserLogin" class="action.UserAction" method="userLogin">           
+       		<result name="success">index.jsp</result>
+       		<result name="error" type="json">
+                <param name="root">result</param>
+                <!-- result是action中设置的变量名，也是页面需要返回的数据，该变量必须有setter和getter方法 -->
+            </result>
+        </action>
+<!--         用户注册 -->
+        <action name="UserReg" class="action.UserAction" method="userReg">           
+       		<result name="success">index.jsp</result>
+       		<result name="error" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+<!--         用户登出 -->
+        <action name="UserExit" class="action.UserAction" method="userExit">           
+       		<result name="success">index.jsp</result>
+        </action>
+	</package>
+</struts>
