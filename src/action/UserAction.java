@@ -34,7 +34,7 @@ public class UserAction extends ActionSupport implements ServletResponseAware {
 	public String userLogin(){	
 		//加密后与数据库进行对比				
 		user.setUserEmail(email);
-		user.setUserPassword(Encryption.hmacSign(password));
+		user.setUserPassword(password);
 		
 		if(userser.sUserLogin(user))
 		{
@@ -53,7 +53,7 @@ public class UserAction extends ActionSupport implements ServletResponseAware {
 	public String userReg(){
 		int outcome;
 		user.setUserEmail(email);
-		user.setUserPassword(Encryption.hmacSign(password));
+		user.setUserPassword(password);
 		user.setUserPhone(phone);
 		user.setUserAddress(address);
 		Map<String,Object> map = new HashMap<String,Object>();
@@ -79,7 +79,7 @@ public class UserAction extends ActionSupport implements ServletResponseAware {
 		}
 	}
 	public String validateRegister(User user){
-		 System.out.print("user.getUserAddress():"+user.getUserAddress());
+//		 System.out.print("user.getUserAddress():"+user.getUserAddress());
 		 String regexE = "^(\\w)+(\\.\\w+)*@(\\w)+((\\.\\w{2,3}){1,3})$";
 		 if(!user.getUserEmail().matches(regexE)){
 			 return "您输入的邮箱格式不正确";

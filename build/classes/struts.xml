@@ -24,5 +24,24 @@
         <action name="UserExit" class="action.UserAction" method="userExit">           
        		<result name="success">index.jsp</result>
         </action>
+        
+<!--         商家登录 -->
+        <action name="SellerLogin" class="action.SellerAction" method="sellerLogin">           
+       		<result name="success">index.jsp</result>
+       		<result name="error" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>
+<!--         商家注册 -->
+        <action name="SellerReg" class="action.SellerAction" method="sellerReg">           
+       		<result name="success">index.jsp</result>
+       		<result name="error" type="json">
+                <param name="root">result</param>
+            </result>
+        </action>        
+<!--         商家登出 -->
+        <action name="SellerExit" class="action.SellerAction" method="sellerExit">           
+       		<result name="success">index.jsp</result>
+        </action>
 	</package>
 </struts>

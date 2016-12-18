@@ -26,7 +26,6 @@ public class UserSer extends ActionSupport{
 	
 	public boolean sUserLogin(User user){	
 		//加密后与数据库进行对比				
-		user.setUserEmail(user.getUserEmail());
 		user.setUserPassword(Encryption.hmacSign(user.getUserPassword()));
 		if(userdao.qUser(user))
 		{
@@ -40,10 +39,7 @@ public class UserSer extends ActionSupport{
 	public int sUserReg(User user){
 		int result = -1;
 
-		user.setUserEmail(user.getUserEmail());
 		user.setUserPassword(Encryption.hmacSign(user.getUserPassword()));
-		user.setUserPhone(user.getUserPhone());
-		user.setUserAddress(user.getUserAddress());
 		
 		if(userdao.QueryEmail(user.getUserEmail())){
 			result= -1;

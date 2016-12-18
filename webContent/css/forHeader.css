@@ -36,6 +36,9 @@
 	z-index:1;
 	border-radius:0px 0px 10px 10px;
 }
+#topNav .seller li{
+	width:100%;
+}
 #topNav .center ul a:hover{
 	color:#d1ad83;
 }

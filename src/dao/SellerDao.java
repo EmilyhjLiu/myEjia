@@ -10,13 +10,13 @@ import bean.Seller;
 
 public class SellerDao {
 	//查找用户是否存在以及用户名与密码是否匹配
-	public boolean qUser(Seller seller)
+	public boolean qSeller(Seller seller)
 	{
 		boolean result=false;
 		Connection con=ConnectSql.GetConnection();
 		Statement st;
 		try {
-			String sql="select * from user where email='"+seller.getSellerEmail()+"' and password='"+seller.getSellerPassword()+"'";
+			String sql="select * from seller where email='"+seller.getSellerEmail()+"' and password='"+seller.getSellerPassword()+"'";
 			st =con.createStatement();
 			ResultSet rs=st.executeQuery(sql);
 			if(rs.next())
@@ -59,20 +59,20 @@ public class SellerDao {
 
 	
 	//用户注册
-	public int addUser(Seller seller)
+	public int addSeller(Seller seller)
 	{
 		int result=0;
 		Connection con=ConnectSql.GetConnection();
 		PreparedStatement ps;
 		try {
-			String sql="insert into seller(email,password,phone,qq,logo,title,englishTitle,blankRate) values (?,?,?,?)";
+			String sql="insert into seller(email,password,qq,logo,title,englishTitle,blackRate) values (?,?,?,?,?,?,?)";
 			ps =con.prepareStatement(sql);
 			ps.setString(1, seller.getSellerEmail());
 			ps.setString(2, seller.getSellerPassword());
 			ps.setString(3, seller.getSellerQQ());
 			ps.setString(4, seller.getSellerLogo());
 			ps.setString(5, seller.getSellerTitle());
-			ps.setString(6, seller.getSellerTitle());
+			ps.setString(6, seller.getSellerEnglishTitle());
 			ps.setLong(7, 0);
 			result=ps.executeUpdate();
 			ps.close();

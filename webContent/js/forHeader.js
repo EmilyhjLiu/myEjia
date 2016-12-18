@@ -80,14 +80,14 @@ function initPop(){
 }
 //注册验证
 function regValidate(){
-	var rEmail=$('#rEmail');
-	var rPassword=$('#rPassword');
-	var enPassword=$('#enPassword');
-	var phone=$('#phone')
 	var register=$('#register');
-	var rMessage=$('#rMessage');
-	
 	register.click(function(){
+		var rEmail=$('#rEmail');
+		var rPassword=$('#rPassword');
+		var enPassword=$('#enPassword');
+		var phone=$('#phone')
+		var rMessage=$('#rMessage');
+		
 		regResult(rEmail.val(),rPassword.val(),enPassword.val(),phone.val(),$('#address').val(),$('#rMessage'));
 	});
 }
@@ -172,6 +172,14 @@ function CheckMail(mail) {
 function CheckPhone(phone) {
 	 var filter  = /^1(3|4|5|7|8)\d{9}$/;
 	 if (filter.test(phone)){
+		 return true;
+	 }else {
+		 return false;
+	 }
+}
+function CheckQQ(qq){
+	 var filter  = /^[1-9][0-9]{4,9}$/;  
+	 if (filter.test(qq)){
 		 return true;
 	 }else {
 		 return false;

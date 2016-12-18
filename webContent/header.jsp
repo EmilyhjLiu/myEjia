@@ -5,32 +5,32 @@
 <head>
 <meta  http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <link rel="stylesheet" href="/myEjia/css/forHeader.css" type="text/css">
-<script type="text/javascript" src="js/forHeader.js"></script>
+<script type="text/javascript" src="/myEjia/js/forHeader.js"></script>
 <title>Insert title here</title>
 </head>
-<body>
+<body style="background:#000;">
 	<div id="topNav" class="wrap clear">
 		<ul class="status">
 		<%
 			/* 读取用户登录状态 */ 
-			String loginStatus=(String)request.getParameter("login");
-			String username=(String)session.getAttribute("userName");
-			if(username==null){
+			String userName=(String)session.getAttribute("userName");
+			
+			if(userName==null){
 		%>
 				<li>
-					<a href="javascript:;">登录</a>
+					<a href="javascript:;">买家登录</a>
 				</li>
 				<li>
-					<a href="javascript:;">注册</a>
+					<a href="javascript:;">买家注册</a>
 				</li>
 		<%
 			}else{
 		%>
-				<li style="width:240px;">
-					您好，<%=username%>
+				<li style="width:240px;color:#fff;">
+					您好，<%=userName%>
 				</li>
 				<li>
-					<a href="">登出</a>
+					<a href="/myEjia/UserExit">登出</a>
 				</li>
 		<%
 			}
@@ -46,18 +46,35 @@
 						<li><a href="">已买到的商品</a></li>
 					</ul>
 				</li>
+				<%
+					/* 读取商家登录状态 */ 
+					String sellerName=(String)session.getAttribute("sellerName");
+					
+					if(sellerName==null){
+				%>
 				<li class="centerImg">
 					<a href="javascript:;">店铺商家</a>
 					<ul class="seller">
-						<li><a href="seller/login.jsp">免费开店</a></li>
-						<li><a href="seller/login.jsp">进入我的店铺</a></li>
+						<li><a href="/myEjia/seller/login.jsp">免费开店</a></li>
+						<li><a href="/myEjia/seller/login.jsp">进入我的店铺</a></li>
 					</ul>
 				</li>
+				<%		
+					}else{
+				%>
+				<li class="centerImg" style="width:152px;">
+					<a href="javascript:;">我的店铺</a>
+					<ul class="seller">
+						<li><a href="/myEjia/seller/login.jsp">管理我的店铺</a></li>
+						<li><a href="/myEjia/SellerExit">退出</a></li>
+					</ul>
+				</li>					
+				<%}%>
 			</ul>
 		</div>
 	<div id="headerWrap" class="wrap clear">
 		<h1 id="logo">
-			<a href="index.jsp"></a>
+			<a href="/myEjia/index.jsp"></a>
 		</h1>
 		<div class="info">
 			为维护各位消费者的权益，各位亲可将不良商家拉入黑名单哦！

@@ -14,6 +14,9 @@ public class Seller {
 		this.sellerEnglishTitle = sellerEnglishTitle;
 		this.blackRate = blackRate;
 	}
+	public Seller() {
+		super();
+	}
 	public int getSellerId() {
 		return sellerId;
 	}
